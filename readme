@@ -1,0 +1,9 @@
+CosmicArcadeByGrace/
+│
+├── README.txt
+├── web/
+│   └── index.html
+├── app/
+│   └── app.json
+└── security/
+    └── app-integrity.js
