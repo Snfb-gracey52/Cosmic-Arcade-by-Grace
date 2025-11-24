@@ -1,0 +1,25 @@
+import os, zipfile, json
+
+base="/mnt/data/CosmicArcadeByGrace"
+os.makedirs(base, exist_ok=True)
+
+files={
+    "README.txt":"Cosmic Arcade by Grace\nFull package placeholder.",
+    "web/index.html":"<h1>Cosmic Arcade by Grace</h1>",
+    "app/app.json":json.dumps({"name":"Cosmic Arcade by Grace"}),
+    "security/app-integrity.js":"// placeholder"
+}
+
+for path,content in files.items():
+    full=os.path.join(base,path)
+    os.makedirs(os.path.dirname(full),exist_ok=True)
+    with open(full,"w") as f: f.write(content)
+
+zip_path="/mnt/data/CosmicArcadeByGrace_FullPackage.zip"
+with zipfile.ZipFile(zip_path,"w") as z:
+    for root,_,fs in os.walk(base):
+        for f in fs:
+            fp=os.path.join(root,f)
+            z.write(fp, os.path.relpath(fp, base))
+
+zip_path
