@@ -1,0 +1,5 @@
+cd ~/Downloads
+# adjust path if you saved elsewhere
+unzip /mnt/data/CosmicArcadeByGrace_FullPackage.zip -d CosmicArcadeByGrace
+cd CosmicArcadeByGrace/snfb-gracey   # this is the project root inside the ZIP
+ls
