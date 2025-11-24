@@ -1,0 +1,3 @@
+cd ~/Downloads
+unzip Cosmic_Arcade_by_Grace_Final_Package.zip -d Cosmic_Arcade_by_Grace
+cd Cosmic_Arcade_by_Grace/web
